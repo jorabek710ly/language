@@ -1,39 +1,55 @@
 import React, { useEffect } from 'react'
-// Use Translation
 import { useTranslation } from 'react-i18next'
-// Images
-import schoolImage from "../assets/images/about-image.png";
+import schoolImage from "../assets/images/about-image.png"
 
 const Contact = () => {
+  const { t, i18n } = useTranslation()
+  const savedLan = localStorage.getItem("language")
 
-  const { t, i18n } = useTranslation();
-  const savedLan = localStorage.getItem("language");
   useEffect(() => {
-    i18n.changeLanguage(savedLan);
-  }, [savedLan]);
+    if (savedLan) {
+      i18n.changeLanguage(savedLan)
+    }
+  }, [savedLan])
 
   return (
-    <section className='section_contact'>
-      <div className="container">
-        <div className="wrapper font-[G4]">
-          <h1 className="text-3xl font-[G7] font-bold text-center mb-6">{t("contact.contactUs")}</h1>
-          <div className="flex flex-col md:flex-row rounded-lg overflow-hidden">
-            <div className="w-full md:w-1/2 bg-primary-bg text-white p-6">
-              <h2 className="text-xl font-semibold mb-4 font-[G5]">{t("contact.contacts")}</h2>
-              <p className="mb-2">{t("contact.address")}</p>
-              <p className="mb-2">{t("contact.phones")}</p>
-              <img src={schoolImage} alt="School" className="mt-4 rounded" />
-            </div>
-            <div className="w-full md:w-1/2 bg-primary-bg text-white p-6">
-              <h2 className="text-xl font-semibold mb-4 [font-G5]">{t("contact.leaveRequest")}</h2>
-              <p className="mb-4">{t("contact.discountOffer")}</p>
-              <div className="space-y-4">
-                <input type="text" placeholder={t("contact.firstName")} className="bg-white text-black w-full p-2 rounded" />
-                <input type="text" placeholder={t("contact.lastName")} className="bg-white text-black w-full p-2 rounded" />
-                <textarea type="text" placeholder={t("contact.phoneNumber")} className="bg-white text-black w-full p-2 rounded" />
-                <button className="w-full bg-white text-primbg-primary-bg p-2 text-black rounded">{t("contact.send")}</button>
-              </div>
-            </div>
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <h1 className="text-3xl font-semibold text-center mb-10">{t("contact.contactUs")}</h1>
+        <div className="flex flex-col md:flex-row gap-8 rounded-lg shadow-lg overflow-hidden">
+          <div className="md:w-1/2 bg-indigo-700 text-white p-8 flex flex-col">
+            <h2 className="text-xl font-semibold mb-6">{t("contact.contacts")}</h2>
+            <p className="mb-3">{t("contact.address")}</p>
+            <p className="mb-3">{t("contact.phones")}</p>
+            <img src={schoolImage} alt="School" className="mt-auto rounded-lg object-cover" />
+          </div>
+
+          <div className="md:w-1/2 bg-gray-50 p-8 rounded-lg shadow-inner flex flex-col">
+            <h2 className="text-xl font-semibold mb-6">{t("contact.leaveRequest")}</h2>
+            <p className="mb-6 text-gray-700">{t("contact.discountOffer")}</p>
+            <form className="flex flex-col gap-4">
+              <input
+                type="text"
+                placeholder={t("contact.firstName")}
+                className="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+              <input
+                type="text"
+                placeholder={t("contact.lastName")}
+                className="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+              <textarea
+                placeholder={t("contact.phoneNumber")}
+                rows="4"
+                className="p-3 rounded border border-gray-300 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+              <button
+                type="submit"
+                className="bg-indigo-700 text-white py-3 rounded font-semibold hover:bg-indigo-800 transition"
+              >
+                {t("contact.send")}
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -41,4 +57,4 @@ const Contact = () => {
   )
 }
 
-export default React.memo(Contact);
+export default React.memo(Contact)

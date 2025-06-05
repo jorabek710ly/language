@@ -1,41 +1,50 @@
 import React, { useEffect } from 'react'
-// Use Translation
 import { useTranslation } from 'react-i18next'
-// Images
-import logo from "../assets/images/school-logo.svg";
-import telegram from "../assets/images/telegram.svg";
-import instagram from "../assets/images/instagram.svg";
-import facebook from "../assets/images/facebook.svg";
+import logo from "../assets/images/school-logo.svg"
+import telegram from "../assets/images/telegram.svg"
+import instagram from "../assets/images/instagram.svg"
+import facebook from "../assets/images/facebook.svg"
 
 const Footer = () => {
-
   const { t, i18n } = useTranslation();
   const savedLan = localStorage.getItem("language");
+
   useEffect(() => {
-    i18n.changeLanguage(savedLan);
+    if (savedLan) {
+      i18n.changeLanguage(savedLan);
+    }
   }, [savedLan]);
 
   return (
-    <footer className="mt-12 sm:mt-16 lg:mt-24 text-center text-white bg-primary-bg ">
-      <div className='container'>
-        <div className="wrapper font-[G4] py-5 md:h-32 lg:h-40 flex flex-col gap-7 sm:gap-2 items-start sm:flex-row sm:items-center sm:justify-between">
-          <div className=''>
-            <img className='w-20 md:w-24 lg:w-32 xl:w-[156px] h-full' src={logo} alt="" />
-          </div>
-          <div className='flex text-start flex-col sm:flex-row sm:items-center gap-4'>
-            <p className='font-[G5] text-base lg:text-[20px]'>{t("contact.contacts")}:</p>
-            <div className='flex flex-col gap-1'>
-              <p>+998971970771</p>
-              <p>+998971970771</p>
-            </div>
-          </div>
-          <div className='flex flex-col gap-5'>
-            <p className='font-[G6] text-base lg:text-[20px] text-start'>{t("footer.beWithUs")}</p>
-            <div className='flex items-center gap-4'>
-              <img src={telegram} alt="" />
-              <img src={instagram} alt="" />
-              <img src={facebook} alt="" />
-            </div>
+    <footer className="bg-gray-900 text-white py-10 mt-20">
+      <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+        
+        {/* Logo */}
+        <div className="flex flex-col items-start gap-4">
+          <img src={logo} alt="School logo" className="w-32 h-auto" />
+          <p className="text-sm text-gray-400">© 2025 All rights reserved.</p>
+        </div>
+
+        {/* Contact */}
+        <div className="flex flex-col gap-2">
+          <h3 className="text-lg font-semibold">{t("contact.contacts")}:</h3>
+          <p className="text-sm">+998 97 197 07 71</p>
+          <p className="text-sm">+998 97 197 07 71</p>
+        </div>
+
+        {/* Social */}
+        <div className="flex flex-col gap-4">
+          <h3 className="text-lg font-semibold">{t("footer.beWithUs")}</h3>
+          <div className="flex items-center gap-4">
+            <a href="#" aria-label="Telegram">
+              <img src={telegram} alt="Telegram" className="w-6 h-6 hover:opacity-80" />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img src={instagram} alt="Instagram" className="w-6 h-6 hover:opacity-80" />
+            </a>
+            <a href="#" aria-label="Facebook">
+              <img src={facebook} alt="Facebook" className="w-6 h-6 hover:opacity-80" />
+            </a>
           </div>
         </div>
       </div>
@@ -43,4 +52,4 @@ const Footer = () => {
   )
 }
 
-export default React.memo(Footer);
+export default React.memo(Footer)
