@@ -1,0 +1,92 @@
+{
+  "navbar": {
+    "aboutOurSchool": "About our school",
+    "advantages": "Advantages",
+    "classes": "Classes",
+    "contacts": "Contacts",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "careForFuture": "We care about your child's future",
+    "experiencedTeachers": "Our experienced teachers make learning fun and effective for your child",
+    "call": "Call",
+    "more": "More"
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "description": "For comfortable education and leisure, we unite children into small, comfortable groups divided by age categories and educational directions. We take an individual approach to each child. There are no more than 10 students per class. In-depth study of the English language. In addition, we send our children abroad for language practice. Education is from 8:00 AM to 5:00 PM; three balanced meals a day (optional), and homework assignments. All conditions and comfort for your children!"
+  },
+  "advantages": {
+    "title": "Our Advantages",
+    "threeMeals": {
+      "title": "Three balanced meals a day",
+      "description": "For a comfortable time at our school, we prepare tasty and healthy food three times a day"
+    },
+    "itTechnologies": {
+      "title": "IT Technologies",
+      "description": "The 21st century is the century of information technology. Your child will learn the basics of programming, trends in the world of gadgets, and professions of the future."
+    },
+    "mentalArithmetic": {
+      "title": "Mental Arithmetic",
+      "description": "We teach children to quickly perform complex mental calculations."
+    },
+    "englishCommunication": {
+      "title": "English Communication",
+      "description": "For fluent English communication, we provide a full day dedicated to speaking practice."
+    },
+    "foreignLanguages": {
+      "title": "Foreign Languages",
+      "description": "Our highly qualified teachers instruct children in English, Russian, Arabic, and Chinese."
+    }
+  },
+  "classes": {
+    "title": "Classes",
+    "signup": "Sign Up",
+    "class0": {
+      "title": "Kindergarten Classes",
+      "age": "4-5 years",
+      "subjects": "Mathematics, Logical thinking, Handwriting, Art studio, IT technologies, Robotics, Gymnastics, Taekwondo"
+    },
+    "class1": {
+      "title": "1st Classes",
+      "age": "6-7 years",
+      "subjects": "Calligraphy, Speech therapy, English etiquette, Conversational English, General education subjects, Sports activities"
+    },
+    "class2": {
+      "title": "2nd Classes",
+      "age": "7-8 years",
+      "subjects": "English 1 step, Chinese language, Arithmetic, Logical thinking, General education subjects, Sports activities"
+    },
+    "class3": {
+      "title": "3rd Classes",
+      "age": "8-9 years",
+      "subjects": "English 2 step, Arabic language, Psychology, Mental arithmetic, IT technologies, General education subjects, Sports activities"
+    },
+    "class4": {
+      "title": "4th Classes",
+      "age": "9-10 years",
+      "subjects": "English 3 step, French and German languages, IT technologies, General education subjects, Sports activities"
+    }
+  },
+  "contact": {
+    "contact": "Contact",
+    "contactUs": "Contact Us",
+    "contacts": "Contacts",
+    "address": "Tashkent city, Chilanzar 16th quarter, Botirma street",
+    "phones": "+998970020771, +998971970771 (Mon-Fri from 09:00 to 17:00)",
+    "leaveRequest": "Leave a request",
+    "discountOffer": "To celebrate the opening of our school, we offer a 20% discount",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phoneNumber": "Phone Number",
+    "send": "Send"
+  },
+  "footer": {
+    "beWithUs": "Be with us"
+  },
+  "language": {
+    "uzbek": "Uzbek",
+    "english": "English",
+    "russian": "Russian"
+  }
+}
